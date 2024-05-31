@@ -1,2 +1,2 @@
-# Exploration-the-Relatioinship-Between-Recipe-Rating-Complexity-Level
-A project for DSC 80 at UCSD
+# Exploration of the Relationship between Recipe Rating and Complexity Level
+Authors: Lin Tian & Jefferson Chen
