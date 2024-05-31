@@ -16,7 +16,7 @@ The dataset we are working with includes recipes and their corresponding ratings
 
 ### 1st Dataset "recipes"
 
-The first dataset, `recipe`
+The first dataset, `recipes`
 
 **Shape: 83782 rows, 12 columns**
 
@@ -39,6 +39,8 @@ The first dataset, `recipe`
 
 ### 2nd Dataset "ratings"
 
+The first dataset, `interactions`
+
 **Shape: 731927 rows, 5 columns**
 
 **Data Included: The rating's corresponding recipe-related data**
@@ -55,7 +57,7 @@ As we are investing with the given datasets, we must find a way to calculate the
 
 For the simplicity of future calculation, we must set up a definition of how to determine the complexity of a recipe. The easiest way to determine this would be 
 
-**$\text{complexity index} = \frac{\text{minutes}}{\text{number of steps}+ \text{number of ingredients}} $** 
+**$$\text{complexity index} = \frac{\text{minutes}}{\text{number of steps}+ \text{number of ingredients}} $$** 
 
 It can help us find the average time it takes for each step and ingredient. If it is larger, meaning the time for each step and ingredient would be larger, and the opposite otherwise. 
 
