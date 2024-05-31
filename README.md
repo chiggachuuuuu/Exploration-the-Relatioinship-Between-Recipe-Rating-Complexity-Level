@@ -58,6 +58,7 @@ As we are investing with the given datasets, we must find a way to calculate the
 For the simplicity of future calculation, we must set up a definition of how to determine the complexity of a recipe. The easiest way to determine this would be 
 
   complexity index = $$ {minutes \over number of steps + number of ingredients} $$
+  
   $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 It can help us find the average time it takes for each step and ingredient. If it is larger, meaning the time for each step and ingredient would be larger, and the opposite otherwise. 
