@@ -20,6 +20,43 @@ The first dataset, `recipe`
 
 **Shape: 83782 rows, 12 columns**
 
-**Data Included: The recipts related data from 2008 to 2018.**
+**Data Included: The recipes related data from 2008 to 2018.**
 
+| Column             | Description                                                    |
+| :----------------- | :--------------------------------------------------------------|
+| `'name'`           | Recipe name                                                    |
+| `'id'`             | Recipe ID                                                      |
+| `'minutes'`        | Minutes to prepare recipe                                      |
+| `'contributor_id'` | User ID who submitted this recipe                              |
+| `'submitted'`      | Date recipe was submitted                                      |
+| `'tags'`           | Food.com tags for recipe                                       |
+| `'nutrition'`      | Nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)]; PDV stands for “percentage of daily value” |
+| `'n_steps'`        | Number of steps in recipe                                      |
+| `'steps'`          | Text for recipe steps, in order                                |
+| `'description'`    | User-provided description                                      |
+| `'ingredients'`    | Text for recipe ingredients                                    |
+| `'n_ingredients'`  | Number of ingredients in recipe                                |
 
+### 2nd Dataset "ratings"
+
+**Shape: 731927 rows, 5 columns**
+
+**Data Included: The rating's corresponding recipe related data**
+
+| Column        | Description         |
+| :------------ | :------------------ |
+| `'user_id'`   | User ID             |
+| `'recipe_id'` | Recipe ID           |
+| `'date'`      | Date of interaction |
+| `'rating'`    | Rating given        |
+| `'review'`    | Review text         |
+
+As we are investing with the given datasets, we must find a way to calculate the complexity of a recipe. Within the columns, `minutes`, `n_steps`, `n_ingredients` relates to our research question the most. Additionally, the values inside the `nutrition` column, such as `calories (#)` might also be helpful for future calculation, when determining the relationship between the recipe complexity and calories. Therefore, we need to separate all the sub values within the `nutrition` column into new columns. We also need to set the cooking time group for each unique recipe. A recipe that spends less than 30 minutes would be in group "Short", 30-60 minutes would be in group "middle", more than 60 minutes would be in group "Long". We will add this information as the `time_group` column. 
+
+For the simplicity of future calculation, we must set up a definition of how to determine the complexity of a recipe. The easiest way to determine this would be 
+
+**$\text{complexity index} = \frac{\text{minutes}}{\text{number of steps}+ \text{number of ingredients}} $** 
+
+It can help us find the average time it takes for each step and ingredient. If it is larger, meaning the time for each step and ingredient would be larger, and opposite otherwise. 
+
+By calculating the complexity index, we simplify the complexity analysis into a manageable and insightful metric. This not only aids in our investigation of how complexity affects recipe ratings but also provides valuable insights for recipe creators and users alike. The complexity index, therefore, is a crucial tool for understanding and optimizing the relationship between recipe complexity and user satisfaction.
