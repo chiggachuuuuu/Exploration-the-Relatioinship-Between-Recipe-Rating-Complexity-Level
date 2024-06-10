@@ -185,9 +185,7 @@ However, after plotting the histogram, we can see that the range of time various
 
 <iframe src="assets/uni/fig_initial.html" width="800" height="600" frameborder="0" ></iframe>
 
-
 <iframe src="assets/uni/fig_restricted.html" width="800" height="600" frameborder="0" ></iframe>
-
 
 #### Distribution of Number of Steps (n_steps)
 
@@ -195,14 +193,11 @@ We will create a histogram to show the distribution of the number of steps for r
 
 <iframe src="assets/uni/fig_n_steps.html" width="800" height="600" frameborder="0" ></iframe>
 
-
 #### Distribution of Number of Ingredients (n_ingredients)
 
 We will create a histogram to show the distribution of the number of ingredients for recipes.
 
 <iframe src="assets/uni/fig_n_ingredients.html" width="800" height="600" frameborder="0" ></iframe>
-
-
 
 ### Bivariate Analysis
 
@@ -212,14 +207,11 @@ Overall, the distribution indicates a strong preference for recipes with high ra
 
 <iframe src="assets/bi/fig_rate_on_time_group.html" width="800" height="600" frameborder="0" ></iframe>
 
-
 Below, we also plot a scatter plot for the rating, conditional on complexity index. 
 
 The plot suggests that there is no strong correlation between the complexity index and the rating. Recipes with both high and low complexity indices can receive high ratings, indicating that factors other than complexity may play a significant role in determining the recipe's rating.
 
 <iframe src="assets/bi/fig_rate_on_com.html" width="800" height="600" frameborder="0" ></iframe>
-
-
 
 ### Interesting Aggregates
 
@@ -227,12 +219,9 @@ To undertand more about the relationship between rating and the cooking time. We
 
 <iframe src="assets/IA/avg_rating_over_time.html" width="800" height="600" frameborder="0" ></iframe>
 
-
 Another interesting pattern we find out is that, average calories over time also shows the same pattern as the average rating. The longer the cooking time is, the more dispersive the average calories is. It is still questionable whether there exist a relationship between average calories and average rating, or it is due to some confounding variables. 
 
-
 <iframe src="assets/IA/avg_cal_over_time.html" width="800" height="600" frameborder="0" ></iframe>
-
 
 <iframe src="assets/IA/avg_cal_over_time_ols.html" width="800" height="600" frameborder="0" ></iframe>
 
@@ -242,22 +231,21 @@ After undertanding the relationship between time, calories, and average ratings.
 
 Overall, the graph suggests that recipes with fewer steps and shorter preparation times tend to receive higher ratings, while more complex recipes with longer preparation times show more variability in ratings. This conclusion also aligns with the previous several graphs we have visualized. 
 
-|n_steps     time_intervals|(0, 20]|(20, 40]|(40, 60]|(60, 80]| ... |(140, 160]|(160, 180]|(180, 200]|(200, 220]|
-| :--------------------    | :---- | :----- | :----- | :----- | :-- | :------- | :------- | :------- | :------- |
-|   1                      | 4.74  |  4.46  |  4.72  |  4.61  | ... |   NaN    |   3.00   |   4.11   |   4.89   |
-|   2                      | 4.75  |  4.68  |  4.56  |  4.70  | ... |   4.97   |   5.00   |   4.66   |   4.25   |
-|   3                      | 4.73  |  4.68  |  4.65  |  4.75  | ... |   4.14   |   4.86   |   4.62   |   5.00   |
-|            ...           |  ...  |  ...   |  ...   |  ...   | ... |   ...    |   ...    |   ...    |   ...    |
-|   86                     | 5.00  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   NaN    |   NaN    |   NaN    |
-|   87                     |  NaN  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   NaN    |   5.00   |   NaN    |
-|   88                     |  NaN  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   3.00   |   NaN    |   NaN    |
+|time_intervals|(0, 20]|(20, 40]|(40, 60]|(60, 80]| ... |(140, 160]|(160, 180]|(180, 200]|(200, 220]|
+|       n_steps|       |        |        |        | ... |          |          |          |          |
+| :----------- | :---- | :----- | :----- | :----- | :-- | :------- | :------- | :------- | :------- |
+|1             | 4.74  |  4.46  |  4.72  |  4.61  | ... |   NaN    |   3.00   |   4.11   |   4.89   |
+|2             | 4.75  |  4.68  |  4.56  |  4.70  | ... |   4.97   |   5.00   |   4.66   |   4.25   |
+|3             | 4.73  |  4.68  |  4.65  |  4.75  | ... |   4.14   |   4.86   |   4.62   |   5.00   |
+|     ...      |  ...  |  ...   |  ...   |  ...   | ... |   ...    |   ...    |   ...    |   ...    |
+|86            | 5.00  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   NaN    |   NaN    |   NaN    |
+|87            |  NaN  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   NaN    |   5.00   |   NaN    |
+|88            |  NaN  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   3.00   |   NaN    |   NaN    |
+
 
 
 
 <iframe src="assets/IA/fig_heatmap.html" width="800" height="600" frameborder="0" ></iframe>
-
-
-
 
 ## Assessment of Missingness
 
@@ -275,7 +263,6 @@ We believe that the missingness of the `review` column is NMAR. In the previous 
 After determine the missingness of the `review` column. We now need to examine the missingness of the column `rating`. Since our research question is the complexity level for the recipe. We will check the distribution of missingness of `complexity_index`. Therefore, we will check whether the missiness in the `rating` column is depends on the `complexity_index` column and the `calories (#)` column to see if there's any relationship. 
 
 
-
 #### Proportion of Complexity Index and Rating
 
 **Null Hypothesis**: The missingness of ratings does not depend on the complexity index in the recipe.
@@ -284,25 +271,24 @@ After determine the missingness of the `review` column. We now need to examine t
 
 **Test Statistic**: The absolute difference of mean in the complexity index of the distribution of the group without missing ratings and the distribution of the group without missing ratings.
 
-**Significance Level: 0.05**
+**Significance Level:** 0.05
 
 <iframe src="assets/miss/come_on_rate.html" width="800" height="600" frameborder="0" ></iframe>
+**Observed Statistic:** 2.0996452610910588
 
-Observed Statistic: 2.0996452610910588
-P-value: 0.122
-
+**P-value:** 0.122
 <iframe src="assets/miss/kdeplot.html" width="800" height="600" frameborder="0" ></iframe>
 
-##### Conclusion
+#### Conclusion
 
 Based on the results of the hypothesis test:
 
 - **Observed Statistic**: The absolute difference in the mean complexity index between recipes with missing ratings and those with non-missing ratings is approximately 2.
 - **P-value**: The p-value is approximately 0.12.
 
-Given that our significance level is 0.05, we observe that the p-value (0.12) is much greater than $\alpha$. This means that we do not have enough evidence to reject the null hypothesis.
+Given that our significance level is 0.05, we observe that the p-value (0.12) is much greater than 0.05. This means that we do not have enough evidence to reject the null hypothesis.
 
-##### Interpretation
+#### Interpretation
 
 Our null hypothesis stated that the missingness of ratings does not depend on the complexity index of the recipe. Since the p-value is very high (0.12), we fail to reject the null hypothesis. This suggests that there is no significant evidence to support the claim that the missingness of ratings is dependent on the complexity index of the recipes. 
 
@@ -318,17 +304,15 @@ In simpler terms, the complexity index  does not appear to influence whether or 
 
 **Test Statistic**: The absolute difference of mean in the calories of the distribution of the group without missing ratings and the distribution of the group without missing ratings.
 
-**Significance Level: 0.05**
-
+**Significance Level:** 0.05
 
 <iframe src="assets/miss/cal_and_rate.html" width="800" height="600" frameborder="0" ></iframe>
+**Observed Statistic:** 69.00722806375853
 
-Observed Statistic: 69.00722806375853
-P-value: 0.0
-
+**P-value:** 0.0
 <iframe src="assets/miss/hh.html" width="800" height="600" frameborder="0" ></iframe>
 
-##### Conclusion
+#### Conclusion
 
 Based on the results of the hypothesis test:
 
@@ -337,7 +321,7 @@ Based on the results of the hypothesis test:
 
 Given that our significance level is 0.05, we observe that the p-value (0.00) is much lower than $\alpha$. This means that wehave enough evidence to reject the null hypothesis.
 
-##### Interpretation
+#### Interpretation
 
 Our null hypothesis stated that the missingness of ratings does not depend on the complexity index of the recipe. Since the p-value is very low (0.00), we have enough evidence  to reject the null hypothesis. This suggests that there is significant evidence to support the claim that the missingness of ratings is dependent on the calories of the recipes. 
 
@@ -348,34 +332,34 @@ In simpler terms, the calories (calculated as the sum of preparation time and th
 
 As stated in the beginning, We are interested in cooking and we often find recipes that are less redundant are easier to follow. Hence, we wonder how does the complexity level of recipes related to the user experience/ratings of recipes. 
 
-**Null Hypothesis $H_0$**: People rate all the recipes on the same scale, regardless of the number of steps.
-- $H_0$: The mean rating of recipes with $<= 10$ steps is equal to the mean rating of recipes with $>$ 10 steps.
+**Null Hypothesis**: People rate all the recipes on the same scale, regardless of the number of steps.
+- Null: The mean rating of recipes with <= 10 steps is equal to the mean rating of recipes with > 10 steps.
 
-**Alternative Hypothesis $H_a$**: People rate recipes with more than 10 steps higher than recipes with 10 or fewer steps.
-- $H_a$: The mean rating of recipes with $<= 10$ steps is lower than the mean rating of recipes with $>$ 10 steps.
+**Alternative Hypothesis**: People rate recipes with more than 10 steps higher than recipes with 10 or fewer steps.
+- Alt: The mean rating of recipes with <= 10 steps is lower than the mean rating of recipes with > 10 steps.
 
-**Test Statistic**: The difference in mean ratings between recipes with $<=$ 10 steps and recipes with $>$ 10 steps.
+**Test Statistic**: The difference in mean ratings between recipes with <= 10 steps and recipes with > 10 steps.
 
-**Significance Level**: $0.05$
+**Significance Level**: 0.05
 
 
-#### Reason for the Test
+### Reason for the Test
 
 We performed this hypothesis test to investigate if the complexity level of recipes, as measured by the number of steps, has an impact on user ratings. Understanding this relationship can provide valuable insights for home cooks, who may prefer less complex recipes if they believe such recipes are rated equally well. It can also guide recipe developers in creating content that aligns with user preferences, potentially increasing user engagement and satisfaction. We proposed the two distributions (with less than 10 steps and more than 10 steps) have the same distribution because from previous plots, we discovered that there's no clear pattern between `ratings` and `n_steps`. 
 
 <iframe src="assets/ht/ht.html" width="800" height="600" frameborder="0" ></iframe>
+**Observed Statistic:** 0.0018707051790087803
 
-Observed Statistic: 0.0018707051790087803
-P-value: 0.289
+**P-value:** 0.289
 
 
-#### Conclusion
+### Conclusion
 
 Based on the hypothesis test conducted, the observed difference in mean ratings between recipes with more than 10 steps and those with 10 or fewer steps is 0.002. The p-value associated with this observed statistic around 0.29.
 
-Given that the p-value (0.29) is significantly greater than the chosen significance level of $0.05$, we fail to reject the null hypothesis. This indicates that there is no statistically significant evidence to suggest that the number of steps in a recipe (whether 10 or fewer, or more than 10) affects the mean rating given by users.
+Given that the p-value (0.29) is significantly greater than the chosen significance level of 0.05, we fail to reject the null hypothesis. This indicates that there is no statistically significant evidence to suggest that the number of steps in a recipe (whether 10 or fewer, or more than 10) affects the mean rating given by users.
 
-#### Final Remarks
+### Final Remarks
 
 Our findings suggest that the complexity level, defined by the number of steps in a recipe, does not have a significant effect on user ratings. This implies that users rate recipes consistently regardless of their complexity level. This could encourage recipe developers to focus on various aspects of the recipes without worrying about the number of steps impacting the user ratings.
 
@@ -383,7 +367,7 @@ Our findings suggest that the complexity level, defined by the number of steps i
 
 ##  Framing a Prediction Problem
 
-#### Problem Identification
+### Problem Identification
 
 **Prediction Problem**: Predicting the calorie content of recipes based on various features such as preparation time, number of steps, ingredients, and other nutritional information.
 
@@ -393,9 +377,10 @@ Our findings suggest that the complexity level, defined by the number of steps i
 
 **Rationale**: 
 - **Practical Relevance**: Predicting the calorie content of a recipe is important for individuals who are conscious of their dietary intake. It helps users make informed decisions about their meals, especially for those following specific calorie-restricted diets.
+
 - **Feature Availability**: All the features used in the model are available at the time of prediction. The preparation time, number of steps, ingredients, and other nutritional information are known before calculating the calories, making them suitable for this prediction task.
 
-#### Features Used for Prediction
+### Features Used for Prediction
 
 - **Potential Quantitative Features**:
   - `minutes`: The time required to prepare the recipe.
@@ -415,7 +400,7 @@ Our findings suggest that the complexity level, defined by the number of steps i
   - `ingredients`: Text description of the ingredients, processed using hashing vectorization and dimensionality reduction.
   - `steps`: Text description of the steps, processed using hashing vectorization and dimensionality reduction.
 
-#### Model Evaluation Metrics
+### Model Evaluation Metrics
 
 **Metrics**:
 - **Root Mean Squared Error (RMSE)**: This metric is chosen because it provides a clear indication of the average error magnitude and penalizes larger errors more significantly than smaller ones. RMSE is widely used for regression problems and is intuitive to interpret as it is in the same units as the response variable (calories).
@@ -428,9 +413,7 @@ Our findings suggest that the complexity level, defined by the number of steps i
 
 ##  Baseline Model
 
-### Baseline Model for Predicting Recipe Calories
-
-#### Description
+### Description
 
 To develop a baseline model to predict the calorie content of recipes using various features from our dataset. We first decide to choose `minutes` and `total_fat` as our two fundamental features because minutes can represents how complex a recipe is, and in general, more fat will have a higher calories. Moreover, using `tag` as our additional nominal features can help us predict whether there's a specific catories of recipe that contains high calories. 
 
@@ -442,11 +425,11 @@ To develop a baseline model to predict the calorie content of recipes using vari
 2. **Nominal Features**:
    - `tags`: Food.com tags for the recipe. We will use one-hot encoding to handle this categorical feature (Different tags may imply different level of calories of recipes).
 
-#### Model and Transformations
+### Model and Transformations
 - **Numerical Features**: Left as-is, but standardized to ensure all features contribute equally to the model (For LinearRegression it is not needed, but we add such step for potential future improvment).
 - **Categorical Features**: Encoded using OneHotEncoder to convert text data into a format suitable for regression.
 
-#### Evaluation Metrics
+### Evaluation Metrics
 - **Root Mean Squared Error (RMSE)**: To assess the average magnitude of errors.
 - **Mean Absolute Error (MAE)**: To provide a straightforward interpretation of average errors.
 
@@ -468,9 +451,9 @@ The Root Mean Squared Error (RMSE) of 177.997 suggests that there are some large
 The baseline model, which uses a simple linear regression with `minutes`, `n_steps`, and `tags` as features, provides a reasonable starting point for predicting recipe calories. While the MAE and RMSE values show that the model has moderate prediction errors, there is significant room for improvement. These baseline performance metrics will be used as a benchmark to compare and evaluate more complex models that we will develop in subsequent steps. The goal will be to reduce both MAE and RMSE, thereby enhancing the model's prediction accuracy and reliability.
 
 
-## Step 7: Final Model
+##  Final Model
 
-#### **Improved Model:**
+### **Improved Model:**
 
 1. **Features Used:**
    - **Quantitative:** `minutes`, `total_fat`, `protein`, `saturated_fat`, `n_ingredients`
@@ -525,7 +508,6 @@ Previously, the baseline model achieved a Mean Absolute Error (MAE) of approxima
 By including new features such as 'protein', 'saturated_fat', 'ingredients', 'n_steps', and 'n_ingredients', the model gained a richer representation of the data, potentially capturing more nuanced relationships between the predictors and the target variable. Additionally, the thorough exploration of hyperparameters through grid search enabled the model to identify the most suitable configuration, leading to enhanced performance.
 
 
-
 ## Fairness Analysis
 
 ### Hypothesis Test:
@@ -547,7 +529,7 @@ By including new features such as 'protein', 'saturated_fat', 'ingredients', 'n_
 
 This adjusted analysis will determine whether the model's Root Mean Squared Error (RMSE) is significantly different between interactions occurring during hotter and colder seasons based on the provided data and the best model obtained through grid search.
 
-#### Reasons to Exlopre:
+### Reasons to Exlopre:
 Exploring the predictive performance of the model across hotter and colder seasons can unveil insightful patterns and behaviors related to dietary habits, cooking preferences, and ingredient availability, among other factors.
 
 1. **Consumer Behavior Analysis**: Understanding how dietary ratings fluctuate across different seasons can help researchers decipher consumer preferences and behavior. Analyzing patterns in rating trends may reveal seasonal variations in food satisfaction, ingredient preferences, or recipe popularity.
@@ -557,13 +539,14 @@ Exploring the predictive performance of the model across hotter and colder seaso
 3. **Health and Nutrition Insights**: Exploring how dietary ratings change across seasons can offer insights into seasonal variations in nutritional choices and dietary habits. Researchers and healthcare professionals can use this information to develop seasonal nutrition guidelines, educate consumers about seasonal eating patterns, and promote healthy seasonal food choices.
 
 <iframe src="assets/ft/ft.html" width="800" height="600" frameborder="0" ></iframe>
-Observed Difference in RMSE: -18.139633273754427
-p-value: 0.001
+**Observed Difference in RMSE:** -18.139633273754427
+
+**p-value:** 0.001
 
 Result:
 Reject the null hypothesis. There is evidence to suggest that the model's RMSE is significantly different between hotter and colder seasons.
 
-#### Conclusion
+### Conclusion
 
 Based on the conducted analysis, the observed difference in RMSE between interactions occurring during hotter and colder seasons is -18.14. The p-value obtained from the permutation test is 0.0, which is less than the significance level of 0.05. Therefore, we reject the null hypothesis.
 
