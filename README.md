@@ -177,16 +177,23 @@ To understand the distribution of the cookiing time, we need to first plot the h
 
 However, after plotting the histogram, we can see that the range of time various significantly from 0 to 1.2 million miniutes. However, most of the datapoints lies from 0 to 5000. In order to have a more general undertanding about the distribution, we decide to regenrate the plot that only display the distribution of time from 0 to 225 miniutes, as 95% of the datapoints fall within 0 to 255 minutes of cooking time. The rest 5% of the datapoints is highly biased with thousands of minitues of cooking time. Therefore, for the rest of the plot that's related to the cooking time, we decide to only plot the cooking time that's less than 225 minutes. 
 
+<iframe src="assets/uni/fig_initial.html" width="800" height="600" frameborder="0" ></iframe>
 
+
+<iframe src="assets/uni/fig_restricted.html" width="800" height="600" frameborder="0" ></iframe>
 
 
 #### Distribution of Number of Steps (n_steps)
 We will create a histogram to show the distribution of the number of steps for recipes.
 
+<iframe src="assets/uni/fig_n_steps.html" width="800" height="600" frameborder="0" ></iframe>
+
 
 #### Distribution of Number of Ingredients (n_ingredients)
 
 We will create a histogram to show the distribution of the number of ingredients for recipes.
+
+<iframe src="assets/uni/fig_n_ingredients.html" width="800" height="600" frameborder="0" ></iframe>
 
 
 
@@ -196,12 +203,14 @@ Below, we have plot a bar plot relates to the distribution of ratings while cond
 
 Overall, the distribution indicates a strong preference for recipes with high ratings across all cooking times, with minor variations. Shorter and moderate cooking time recipes slightly edge out in receiving 4-star ratings, while shorter cooking times have a negligible increase in lower ratings. This data suggests that the length of cooking time has a minimal impact on the overall rating distribution, with users generally favoring well-rated recipes regardless of how long they take to prepare.
 
+<iframe src="assets/bi/fig_rate_on_time_group.html" width="800" height="600" frameborder="0" ></iframe>
 
 
-
-Below, we also plot a scatter plot for the complexity index, conditional on complexity index. 
+Below, we also plot a scatter plot for the rating, conditional on complexity index. 
 
 The plot suggests that there is no strong correlation between the complexity index and the rating. Recipes with both high and low complexity indices can receive high ratings, indicating that factors other than complexity may play a significant role in determining the recipe's rating.
+
+<iframe src="assets/bi/fig_rate_on_com.html" width="800" height="600" frameborder="0" ></iframe>
 
 
 
@@ -209,12 +218,16 @@ The plot suggests that there is no strong correlation between the complexity ind
 
 To undertand more about the relationship between rating and the cooking time. We create a scatter plot between the average rating over time. As a result, here does not exist a clear pattern between the two variable. However, one thing we noticed is that the average rating tends to various more as the cooking time increases. In other words, the average rating is more dispersive when the cooking time increases. Additonally, there exist more average rating 5 when the cooking time increases.
 
-
+<iframe src="assets/IA/avg_rating_over_time.html" width="800" height="600" frameborder="0" ></iframe>
 
 
 Another interesting pattern we find out is that, average calories over time also shows the same pattern as the average rating. The longer the cooking time is, the more dispersive the average calories is. It is still questionable whether there exist a relationship between average calories and average rating, or it is due to some confounding variables. 
 
 
+<iframe src="assets/IA/avg_cal_over_time.html" width="800" height="600" frameborder="0" ></iframe>
+
+
+<iframe src="assets/IA/avg_cal_over_time_ols.html" width="800" height="600" frameborder="0" ></iframe>
 
 
 
@@ -222,8 +235,19 @@ After undertanding the relationship between time, calories, and average ratings.
 
 Overall, the graph suggests that recipes with fewer steps and shorter preparation times tend to receive higher ratings, while more complex recipes with longer preparation times show more variability in ratings. This conclusion also aligns with the previous several graphs we have visualized. 
 
+|time_intervals\nn_steps|(0, 20]|(20, 40]|(40, 60]|(60, 80]| ... |(140, 160]|(160, 180]|(180, 200]|(200, 220]|
+| :-------------------- | :---- | :----- | :----- | :----- | :-- | :------- | :------- | :------- | :------- |
+|                      1| 4.74  |  4.46  |  4.72  |  4.61  | ... |   NaN    |   3.00   |   4.11   |   4.89   |
+|                      2| 4.75  |  4.68  |  4.56  |  4.70  | ... |   4.97   |   5.00   |   4.66   |   4.25   |
+|                      3| 4.73  |  4.68  |  4.65  |  4.75  | ... |   4.14   |   4.86   |   4.62   |   5.00   |
+|          ...          |  ...  |  ...   |  ...   |  ...   | ... |   ...    |   ...    |   ...    |   ...    |
+|                     86| 5.00  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   NaN    |   NaN    |   NaN    |
+|                     87|  NaN  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   NaN    |   5.00   |   NaN    |
+|                     88|  NaN  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   3.00   |   NaN    |   NaN    |
 
 
+
+<iframe src="assets/IA/fig_heatmap.html" width="800" height="600" frameborder="0" ></iframe>
 
 
 
