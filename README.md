@@ -232,7 +232,7 @@ After undertanding the relationship between time, calories, and average ratings.
 Overall, the graph suggests that recipes with fewer steps and shorter preparation times tend to receive higher ratings, while more complex recipes with longer preparation times show more variability in ratings. This conclusion also aligns with the previous several graphs we have visualized. 
 
 |time_intervals|(0, 20]|(20, 40]|(40, 60]|(60, 80]| ... |(140, 160]|(160, 180]|(180, 200]|(200, 220]|
-|       n_steps|       |        |        |        | ... |          |          |          |          |
+|       n_steps|       |        |        |        |     |          |          |          |          |
 | :----------- | :---- | :----- | :----- | :----- | :-- | :------- | :------- | :------- | :------- |
 |1             | 4.74  |  4.46  |  4.72  |  4.61  | ... |   NaN    |   3.00   |   4.11   |   4.89   |
 |2             | 4.75  |  4.68  |  4.56  |  4.70  | ... |   4.97   |   5.00   |   4.66   |   4.25   |
@@ -319,7 +319,7 @@ Based on the results of the hypothesis test:
 - **Observed Statistic**: The absolute difference in the mean calories between recipes with missing ratings and those with non-missing ratings is approximately 69.
 - **P-value**: The p-value is approximately 0.00.
 
-Given that our significance level is 0.05, we observe that the p-value (0.00) is much lower than $\alpha$. This means that wehave enough evidence to reject the null hypothesis.
+Given that our significance level is 0.05, we observe that the p-value (0.00) is much lower than 0.05. This means that wehave enough evidence to reject the null hypothesis.
 
 #### Interpretation
 
