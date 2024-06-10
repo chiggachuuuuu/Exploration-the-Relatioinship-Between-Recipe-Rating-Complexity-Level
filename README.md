@@ -242,16 +242,15 @@ After undertanding the relationship between time, calories, and average ratings.
 
 Overall, the graph suggests that recipes with fewer steps and shorter preparation times tend to receive higher ratings, while more complex recipes with longer preparation times show more variability in ratings. This conclusion also aligns with the previous several graphs we have visualized. 
 
-|time_intervals|(0, 20]|(20, 40]|(40, 60]|(60, 80]| ... |(140, 160]|(160, 180]|(180, 200]|(200, 220]|
-|       n_steps|       |        |        |        |     |          |          |          |          |
-| :----------- | :---- | :----- | :----- | :----- | :-- | :------- | :------- | :------- | :------- |
-|             1| 4.74  |  4.46  |  4.72  |  4.61  | ... |   NaN    |   3.00   |   4.11   |   4.89   |
-|             2| 4.75  |  4.68  |  4.56  |  4.70  | ... |   4.97   |   5.00   |   4.66   |   4.25   |
-|             3| 4.73  |  4.68  |  4.65  |  4.75  | ... |   4.14   |   4.86   |   4.62   |   5.00   |
-|      ...     |  ...  |  ...   |  ...   |  ...   | ... |   ...    |   ...    |   ...    |   ...    |
-|            86| 5.00  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   NaN    |   NaN    |   NaN    |
-|            87|  NaN  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   NaN    |   5.00   |   NaN    |
-|            88|  NaN  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   3.00   |   NaN    |   NaN    |
+|n_steps     time_intervals|(0, 20]|(20, 40]|(40, 60]|(60, 80]| ... |(140, 160]|(160, 180]|(180, 200]|(200, 220]|
+| :--------------------    | :---- | :----- | :----- | :----- | :-- | :------- | :------- | :------- | :------- |
+|   1                      | 4.74  |  4.46  |  4.72  |  4.61  | ... |   NaN    |   3.00   |   4.11   |   4.89   |
+|   2                      | 4.75  |  4.68  |  4.56  |  4.70  | ... |   4.97   |   5.00   |   4.66   |   4.25   |
+|   3                      | 4.73  |  4.68  |  4.65  |  4.75  | ... |   4.14   |   4.86   |   4.62   |   5.00   |
+|            ...           |  ...  |  ...   |  ...   |  ...   | ... |   ...    |   ...    |   ...    |   ...    |
+|   86                     | 5.00  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   NaN    |   NaN    |   NaN    |
+|   87                     |  NaN  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   NaN    |   5.00   |   NaN    |
+|   88                     |  NaN  |  NaN   |  NaN   |  NaN   | ... |   NaN    |   3.00   |   NaN    |   NaN    |
 
 
 
